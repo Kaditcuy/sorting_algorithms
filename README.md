@@ -23,16 +23,18 @@ A slow sorting algorithm for the simplest data sets
 
 | Case  | Performance |
 | :---: | :---: |
-| Worst case pe
+| Best case performance  | O(n)  |
+| Average case performance  | O(n^2)  |
+| Worst case performance   | O(n^2)  |
 ## Selection Sort
 
 Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations
 
 | Case  | Performance |
 | :---: | :---: |
-| Worst case performance   | O(n^2)  |
 | Best case performance  | O(n^2)  |
 | Average case performance  | O(n^2)  |
+| Worst case performance   | O(n^2)  |
 
 ## Quick sort
 
@@ -40,9 +42,9 @@ Quick Sort is a recursive sorting algorithm that is more effective than other O(
 
 | Case  | Performance |
 | :---: | :---: |
-| Worst case performance   | O(n^2)  |
 | Best case performance  | O(n log n)  |
 | Average case performance  | O(n log n)  |
+| Worst case performance   | O(n^2)  |
 
 ## Author
 * Philip Ukanwoke [Kaditcuy](https://github.com/Kaditcuy)
