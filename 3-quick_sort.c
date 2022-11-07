@@ -23,7 +23,7 @@ void quick_sort(int *array, size_t size)
 */
 void lomuto_qsort(int *array, int start, int end, size_t size)
 {
-	int pIndex;
+	int pIndex = 0;
 
 	if (start < end)
 	{
@@ -44,42 +44,23 @@ void lomuto_qsort(int *array, int start, int end, size_t size)
 int partition(int *array, int start, int end, size_t size)
 {
 	int pivot = array[end];
-	int pIndex = start;
+	int pIndex = start - 1;
 	int i;
+	int tmp;
 
-	for (i = start; i < end; i++)
+	for (i = start; i <= end; i++)
 	{
 		if (array[i] <= pivot)
 		{
-			swap(&array[i], &array[pIndex]);
 			pIndex++;
-			/*
-			* if (pIndex != i)
-			* {
-			*	tmp = array[pIndex];
-			*	array[pIndex] = array[i];
-			*	array[i] = tmp;
-			*	print_array(array, size);
-			* }
-			*/
+			if (pIndex != i)
+			{
+				tmp = array[pIndex];
+				array[pIndex] = array[i];
+				array[i] = tmp;
+				print_array(array, size);
+			}
 		}
 	}
-	swap(&array[pIndex], &array[end]);
-	print_array(array, size);
 	return (pIndex);
-}
-/**
-* swap - swaps two values
-* @a: index to swap
-* @b: index to swap
-*
-* Return: Null
-*/
-void swap(int *a, int *b)
-{
-	int temp;
-
-	temp = *b;
-	*b = *a;
-	*a = temp;
 }
